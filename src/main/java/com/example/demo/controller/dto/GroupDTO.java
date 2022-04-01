@@ -1,15 +1,15 @@
 package com.example.demo.controller.dto;
 
 import com.example.demo.entity.Group;
-import lombok.Data;
+import lombok.Getter;
 
-@Data
-public class GroupDTO {
+@Getter
+public class GroupDTO extends DTO{
     public GroupDTO(Group group) {
         this.id = group.getId();
         this.name = group.getName();
     }
 
-    private Long id;
-    private String name;
+    private final Long id;
+    private final String name;
 }

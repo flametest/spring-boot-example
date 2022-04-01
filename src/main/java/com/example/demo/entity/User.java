@@ -5,6 +5,7 @@ import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Set;
 
@@ -20,6 +21,7 @@ public class User implements Serializable {
     private Long id;
     private String username;
     private String email;
+    private LocalDateTime createdAt;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "user")
     private UserProfile profile;
